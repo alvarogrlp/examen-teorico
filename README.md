@@ -1,4 +1,10 @@
-# examen-teorico
+# *Ejercicio 1*
+
+<img src = "imagen.png">
+
+# *Ejercicio 2*
+
+# Especificación de Casos de Uso
 
 ## Actores
 
@@ -43,7 +49,7 @@
 
 ## Casos de Uso
 
-### Caso de Uso: Proporciona Datos Personales
+### Proporciona Datos Personales
 | Caso de Uso CU | Proporciona Datos Personales |
 |---|---|
 | **Fuentes** | Especificación del sistema VIDEOMAX. |
@@ -59,7 +65,7 @@
 
 ---
 
-### Caso de Uso: Alquila Película
+### Alquila Película
 | Caso de Uso CU | Alquila Película |
 |---|---|
 | **Fuentes** | Especificación del sistema VIDEOMAX. |
@@ -75,7 +81,7 @@
 
 ---
 
-### Caso de Uso: Devuelve Película
+### Devuelve Película
 | Caso de Uso CU | Devuelve Película |
 |---|---|
 | **Fuentes** | Especificación del sistema VIDEOMAX. |
@@ -91,7 +97,7 @@
 
 ---
 
-### Caso de Uso: Reserva Película
+### Reserva Película
 | Caso de Uso CU | Reserva Película |
 |---|---|
 | **Fuentes** | Especificación del sistema VIDEOMAX. |
@@ -107,7 +113,7 @@
 
 ---
 
-### Caso de Uso: Registra Película
+### Registra Película
 | Caso de Uso CU | Registra Película |
 |---|---|
 | **Fuentes** | Especificación del sistema VIDEOMAX. |
@@ -123,7 +129,7 @@
 
 ---
 
-### Caso de Uso: Abastece Película
+### Abastece Película
 | Caso de Uso CU | Abastece Película |
 |---|---|
 | **Fuentes** | Especificación del sistema VIDEOMAX. |
@@ -137,4 +143,98 @@
 | **Autor** | alvarogrlp |
 | **Fecha** | 20 de noviembre de 2024 |
 
+---
 
+### Seleccionar Película
+| Caso de Uso CU | Seleccionar Película |
+|---|---|
+| **Fuentes** | Especificación del sistema VIDEOMAX. |
+| **Actor** | Cliente |
+| **Descripción** | El cliente elige una película del catálogo disponible. |
+| **Flujo básico** | 1. El cliente accede al catálogo.<br>2. Busca una película específica o por categoría.<br>3. Selecciona la película deseada. |
+| **Pre-condiciones** | El cliente debe estar registrado y haber iniciado sesión en el sistema. |
+| **Post-condiciones** | La película queda identificada para su alquiler o reserva. |
+| **Requerimientos** | El catálogo debe estar actualizado. |
+| **Notas** | Este caso de uso es común para las acciones de alquilar y reservar películas. |
+| **Autor** | alvarogrlp |
+| **Fecha** | 20 de noviembre de 2024 |
+
+---
+
+### Registra Alquiler
+| Caso de Uso CU | Registra Alquiler |
+|---|---|
+| **Fuentes** | Especificación del sistema VIDEOMAX. |
+| **Actor** | Administrador VIDEOMAX |
+| **Descripción** | El administrador registra el alquiler de una película seleccionada por el cliente. |
+| **Flujo básico** | 1. El cliente selecciona la película.<br>2. El administrador registra la transacción.<br>3. La película queda marcada como alquilada. |
+| **Pre-condiciones** | La película debe estar disponible y el cliente debe haber proporcionado los datos necesarios. |
+| **Post-condiciones** | El sistema almacena el registro del alquiler. |
+| **Requerimientos** | Sistema funcional y actualizado. |
+| **Notas** | Puede incluir detalles como la fecha de devolución esperada. |
+| **Autor** | alvarogrlp |
+| **Fecha** | 20 de noviembre de 2024 |
+
+---
+
+### Registra Reserva
+| Caso de Uso CU | Registra Reserva |
+|---|---|
+| **Fuentes** | Especificación del sistema VIDEOMAX. |
+| **Actor** | Administrador VIDEOMAX |
+| **Descripción** | El administrador registra la reserva de una película solicitada por el cliente. |
+| **Flujo básico** | 1. El cliente solicita una reserva.<br>2. El administrador registra la reserva en el sistema.<br>3. La película queda bloqueada para otros clientes temporalmente. |
+| **Pre-condiciones** | La película debe estar disponible y el cliente debe estar registrado. |
+| **Post-condiciones** | La reserva queda activa en el sistema. |
+| **Requerimientos** | La disponibilidad de la película en el inventario. |
+| **Notas** | Las reservas tienen un tiempo límite antes de expirar. |
+| **Autor** | alvarogrlp |
+| **Fecha** | 20 de noviembre de 2024 |
+
+---
+
+### Actualiza Proveedor
+| Caso de Uso CU | Actualiza Proveedor |
+|---|---|
+| **Fuentes** | Especificación del sistema VIDEOMAX. |
+| **Actor** | Administrador VIDEOMAX |
+| **Descripción** | El administrador actualiza la información de los proveedores en el sistema. |
+| **Flujo básico** | 1. El administrador selecciona un proveedor.<br>2. Ingresa los datos actualizados.<br>3. El sistema valida y guarda los cambios. |
+| **Pre-condiciones** | El proveedor debe estar previamente registrado en el sistema. |
+| **Post-condiciones** | Los datos actualizados quedan reflejados en el sistema. |
+| **Requerimientos** | Acceso administrativo al sistema. |
+| **Notas** | Es importante mantener los datos actualizados para la gestión del inventario. |
+| **Autor** | alvarogrlp |
+| **Fecha** | 20 de noviembre de 2024 |
+
+---
+
+### Abastece Película Según Existencia
+| Caso de Uso CU | Abastece Película Según Existencia |
+|---|---|
+| **Fuentes** | Especificación del sistema VIDEOMAX. |
+| **Actor** | Proveedor |
+| **Descripción** | El proveedor abastece películas en función de las necesidades del inventario. |
+| **Flujo básico** | 1. El sistema notifica al proveedor sobre la baja existencia de una película.<br>2. El proveedor entrega las películas requeridas.<br>3. El sistema actualiza el inventario. |
+| **Pre-condiciones** | El sistema debe monitorear las existencias de películas. |
+| **Post-condiciones** | El inventario se actualiza con las nuevas películas. |
+| **Requerimientos** | Comunicación activa entre el sistema y el proveedor. |
+| **Notas** | Este caso de uso depende de las alertas automáticas del sistema. |
+| **Autor** | alvarogrlp |
+| **Fecha** | 20 de noviembre de 2024 |
+
+---
+
+### Registra Cliente
+| Caso de Uso CU | Registra Cliente |
+|---|---|
+| **Fuentes** | Documento que sustenta el caso de uso. |
+| **Actor** | Administrador |
+| **Descripción** | El administrador registra los datos de un cliente en el sistema. |
+| **Flujo básico** | 1. El administrador accede al sistema.<br>2. Proporciona los datos del cliente.<br>3. El sistema valida y guarda los datos. |
+| **Pre-condiciones** | El cliente debe proporcionar toda la información necesaria. |
+| **Post-condiciones** | El cliente queda registrado en el sistema. |
+| **Requerimientos** | Acceso al sistema administrativo. |
+| **Notas** | El sistema verifica si ya existe un cliente con los mismos datos. |
+| **Autor** | alvarogrlp |
+| **Fecha** | 20 de noviembre de 2024 |
